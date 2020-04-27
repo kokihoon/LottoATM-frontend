@@ -1,7 +1,9 @@
 import React from "react";
+import AppLayout from "../components/AppLoayout";
+import "../styles/reset.css";
 
 const Home = () => {
-  return <div>LottoATM</div>;
+  return <AppLayout>LottoATM</AppLayout>;
 };
 
 export default Home;

@@ -93,6 +93,95 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/AppLoayout/index.tsx":
+/*!*****************************************!*\
+  !*** ./components/AppLoayout/index.tsx ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styled */ "./components/AppLoayout/styled.ts");
+var _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/components/AppLoayout/index.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const AppLayout = ({
+  children
+}) => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NavLayout"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 7
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["LayoutLogo"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, "LottoATM"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Login"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 9
+    }
+  }, "\uB85C\uADF8\uC778")), children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AppLayout);
+
+/***/ }),
+
+/***/ "./components/AppLoayout/styled.ts":
+/*!*****************************************!*\
+  !*** ./components/AppLoayout/styled.ts ***!
+  \*****************************************/
+/*! exports provided: NavLayout, LayoutLogo, Login */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavLayout", function() { return NavLayout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutLogo", function() { return LayoutLogo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const NavLayout = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  height: 69px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+
+  height: 72px;
+  margin-top: -20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+const LayoutLogo = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  color: blue;
+`;
+const Login = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  color: blue;
+`;
+
+/***/ }),
+
 /***/ "./pages/index.tsx":
 /*!*************************!*\
   !*** ./pages/index.tsx ***!
@@ -104,22 +193,38 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_AppLoayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AppLoayout */ "./components/AppLoayout/index.tsx");
+/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/reset.css */ "./styles/reset.css");
+/* harmony import */ var _styles_reset_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_reset_css__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+
+
 const Home = () => {
-  return __jsx("div", {
+  return __jsx(_components_AppLoayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4,
+      lineNumber: 6,
       columnNumber: 10
     }
   }, "LottoATM");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./styles/reset.css":
+/*!**************************!*\
+  !*** ./styles/reset.css ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -143,6 +248,17 @@ module.exports = __webpack_require__(/*! /Users/kihoonko/Desktop/lottoATM-fronte
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 
