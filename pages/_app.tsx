@@ -2,7 +2,7 @@ import { NextComponentType } from "next";
 import { AppContext, AppInitialProps, AppProps } from "next/app";
 import "../styles/reset.css";
 
-const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
+const LottoATM: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
   Component,
   pageProps
 }) => {
@@ -13,7 +13,7 @@ const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
   );
 };
 
-MyApp.getInitialProps = async ({
+LottoATM.getInitialProps = async ({
   Component,
   ctx
 }: AppContext): Promise<AppInitialProps> => {
@@ -26,4 +26,4 @@ MyApp.getInitialProps = async ({
   return { pageProps };
 };
 
-export default MyApp;
+export default LottoATM;

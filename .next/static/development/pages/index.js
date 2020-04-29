@@ -42,7 +42,14 @@ var AppLayout = function AppLayout(_ref) {
       lineNumber: 13,
       columnNumber: 9
     }
-  }, "\uB85C\uADF8\uC778")), children);
+  }, "\uB85C\uADF8\uC778")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["MenuModal"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 7
+    }
+  }, "1"), children);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AppLayout);
@@ -53,7 +60,7 @@ var AppLayout = function AppLayout(_ref) {
 /*!*****************************************!*\
   !*** ./components/AppLoayout/styled.ts ***!
   \*****************************************/
-/*! exports provided: NavLayout, LayoutLogo, Login */
+/*! exports provided: NavLayout, LayoutLogo, Login, MenuModal */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61,68 +68,273 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavLayout", function() { return NavLayout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutLogo", function() { return LayoutLogo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
-/* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuModal", function() { return MenuModal; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
-
-function _templateObject3() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  color: blue;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  color: blue;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  height: 69px;\n  left: 0;\n  width: 100%;\n  background: #fff;\n  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);\n\n  height: 72px;\n  margin-top: -20px;\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var NavLayout = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
-var LayoutLogo = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2());
-var Login = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject3());
+var NavLayout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__NavLayout",
+  componentId: "sc-263gxd-0"
+})(["height:69px;left:0;width:100%;background:#fff;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);height:50px;position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;"]);
+var LayoutLogo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__LayoutLogo",
+  componentId: "sc-263gxd-1"
+})(["color:#333;margin:15px;"]);
+var Login = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__Login",
+  componentId: "sc-263gxd-2"
+})(["color:#333;margin:15px;"]);
+var MenuModal = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__MenuModal",
+  componentId: "sc-263gxd-3"
+})(["height:200px;width:30%;position:fixed;top:50px;right:0;background-color:#fff;border-radius:15px;margin:10px;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);"]);
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js ***!
-  \**************************************************************************/
+/***/ "./components/MainComponent/index.tsx":
+/*!********************************************!*\
+  !*** ./components/MainComponent/index.tsx ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _taggedTemplateLiteral; });
-function _taggedTemplateLiteral(strings, raw) {
-  if (!raw) {
-    raw = strings.slice(0);
-  }
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styled */ "./components/MainComponent/styled.ts");
+var _this = undefined,
+    _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/components/MainComponent/index.tsx";
 
-  return Object.freeze(Object.defineProperties(strings, {
-    raw: {
-      value: Object.freeze(raw)
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var MainComponent = function MainComponent() {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["MainLayout"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 7
     }
-  }));
-}
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["MainHeader"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, "907\uD68C \uB2F9\uCCA8\uACB0\uACFC"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["SubMainHeader"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, "(2020\uB144 04\uC6D4 18\uC77C \uCD94\uCCA8)"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["BallNav"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 9
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["GeneralNumberNav"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 11
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#FF7272",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 15
+    }
+  }, "21")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#FF7272",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 15
+    }
+  }, "27")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#FF7272",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 15
+    }
+  }, "29")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#AAAAAA",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 15
+    }
+  }, "38")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#AAAAAA",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 15
+    }
+  }, "40")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#B0D840",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 15
+    }
+  }, "44"))), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["PlusNav"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 11
+    }
+  }, __jsx("img", {
+    src: "/images/plus_sign.png",
+    alt: "my image",
+    height: "50px;",
+    width: "50px;",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 13
+    }
+  })), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["GeneralNumberNav"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 11
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#AAAAAA",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 15
+    }
+  }, "37"))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MainComponent);
+
+/***/ }),
+
+/***/ "./components/MainComponent/styled.ts":
+/*!********************************************!*\
+  !*** ./components/MainComponent/styled.ts ***!
+  \********************************************/
+/*! exports provided: MainLayout, MainHeader, SubMainHeader, BallNav, GeneralNumberNav, NumberBall, Number, PlusNav */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainLayout", function() { return MainLayout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainHeader", function() { return MainHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubMainHeader", function() { return SubMainHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BallNav", function() { return BallNav; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GeneralNumberNav", function() { return GeneralNumberNav; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NumberBall", function() { return NumberBall; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Number", function() { return Number; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlusNav", function() { return PlusNav; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+var MainLayout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__MainLayout",
+  componentId: "sc-21n40s-0"
+})(["background:#fff;display:flex;flex-direction:column;align-items:center;height:100%;"]);
+var MainHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__MainHeader",
+  componentId: "sc-21n40s-1"
+})(["color:#d43301;font-size:3rem;margin-top:6%;"]);
+var SubMainHeader = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__SubMainHeader",
+  componentId: "sc-21n40s-2"
+})(["color:#707070;"]);
+var BallNav = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__BallNav",
+  componentId: "sc-21n40s-3"
+})(["display:flex;margin-top:3%;"]);
+var GeneralNumberNav = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__GeneralNumberNav",
+  componentId: "sc-21n40s-4"
+})(["background-color:#f0f8ff;display:flex;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);border-radius:15px;"]);
+var NumberBall = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__NumberBall",
+  componentId: "sc-21n40s-5"
+})(["display:flex;width:120px;height:120px;border-radius:50%;background-color:", ";box-shadow:inset -25px -15px 40px rgba(0,0,0,0.3);background-image:linear-gradient( -45deg,rgba(255,255,220,0.3) 0%,transparent 100% );margin:20px;"], function (props) {
+  return props.color;
+});
+var Number = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span.withConfig({
+  displayName: "styled__Number",
+  componentId: "sc-21n40s-6"
+})(["display:flex;justify-content:center;align-items:center;width:100%;font-size:3rem;color:#fff;"]);
+var PlusNav = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styled__PlusNav",
+  componentId: "sc-21n40s-7"
+})(["display:flex;margin:15px;justify-content:center;align-items:center;"]);
 
 /***/ }),
 
@@ -3496,10 +3708,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_AppLoayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AppLoayout */ "./components/AppLoayout/index.tsx");
+/* harmony import */ var _components_MainComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MainComponent */ "./components/MainComponent/index.tsx");
 var _this = undefined,
     _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/pages/index.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -3508,17 +3722,24 @@ var Home = function Home() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 10
+      lineNumber: 7,
+      columnNumber: 5
     }
-  }, "LottoATM");
+  }, __jsx(_components_MainComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 7
+    }
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!**************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fkihoonko%2FDesktop%2FlottoATM-frontend%2Fpages%2Findex.tsx ***!
   \**************************************************************************************************************************************/
@@ -3541,5 +3762,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

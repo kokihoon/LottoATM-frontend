@@ -359,7 +359,7 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen,\n    Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  color: #333;\n}\n\na {\n  text-decoration: none;\n}\n\nli {\n  list-style: none;\n}\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer;\n}\n\nbody {\n  padding-top: 75px;\n  background-color: #f7f8fb;\n}\n", "",{"version":3,"sources":["/Users/kihoonko/Desktop/lottoATM-frontend/styles/reset.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB;gEAC8D;EAC9D,WAAW;AACb;;AAEA;EACE,qBAAqB;AACvB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,iBAAiB;EACjB,yBAAyB;AAC3B","file":"reset.css","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen,\n    Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\n  color: #333;\n}\n\na {\n  text-decoration: none;\n}\n\nli {\n  list-style: none;\n}\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer;\n}\n\nbody {\n  padding-top: 75px;\n  background-color: #f7f8fb;\n}\n"]}]);
+exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  color: #333;\n}\na {\n  text-decoration: none;\n}\n\n#__next {\n  height: 100%;\n}\nli {\n  list-style: none;\n}\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer;\n}\n\nbody {\n  height: 100%;\n  padding-top: 50px;\n  background-color: #f7f8fb;\n}\n\nhtml {\n  height: 100%;\n}\n", "",{"version":3,"sources":["/Users/kihoonko/Desktop/lottoATM-frontend/styles/reset.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,WAAW;AACb;AACA;EACE,qBAAqB;AACvB;;AAEA;EACE,YAAY;AACd;AACA;EACE,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,yBAAyB;AAC3B;;AAEA;EACE,YAAY;AACd","file":"reset.css","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  color: #333;\n}\na {\n  text-decoration: none;\n}\n\n#__next {\n  height: 100%;\n}\nli {\n  list-style: none;\n}\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer;\n}\n\nbody {\n  height: 100%;\n  padding-top: 50px;\n  background-color: #f7f8fb;\n}\n\nhtml {\n  height: 100%;\n}\n"]}]);
 
 
 /***/ }),
@@ -3446,7 +3446,7 @@ var _this = undefined,
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
-var MyApp = function MyApp(_ref) {
+var LottoATM = function LottoATM(_ref) {
   var Component = _ref.Component,
       pageProps = _ref.pageProps;
   return __jsx(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, pageProps, {
@@ -3459,7 +3459,7 @@ var MyApp = function MyApp(_ref) {
   })));
 };
 
-MyApp.getInitialProps = function _callee(_ref2) {
+LottoATM.getInitialProps = function _callee(_ref2) {
   var Component, ctx, pageProps;
   return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
     while (1) {
@@ -3492,7 +3492,7 @@ MyApp.getInitialProps = function _callee(_ref2) {
   }, null, null, null, Promise);
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (MyApp);
+/* harmony default export */ __webpack_exports__["default"] = (LottoATM);
 
 /***/ }),
 

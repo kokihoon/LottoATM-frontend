@@ -114,7 +114,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-const MyApp = ({
+const LottoATM = ({
   Component,
   pageProps
 }) => {
@@ -128,7 +128,7 @@ const MyApp = ({
   })));
 };
 
-MyApp.getInitialProps = async ({
+LottoATM.getInitialProps = async ({
   Component,
   ctx
 }) => {
@@ -143,7 +143,7 @@ MyApp.getInitialProps = async ({
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (MyApp);
+/* harmony default export */ __webpack_exports__["default"] = (LottoATM);
 
 /***/ }),
 
