@@ -17319,21 +17319,37 @@ var AppLayout = function AppLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19,
+      lineNumber: 24,
       columnNumber: 7
     }
   }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["LayoutLogo"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
+      lineNumber: 25,
       columnNumber: 9
     }
-  }, "LottoATM"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["MenuNav"], {
+  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__["FontAwesomeIcon"], {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faMoneyBillWave"],
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
+      lineNumber: 26,
+      columnNumber: 11
+    }
+  }), "LottoATM", __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__["FontAwesomeIcon"], {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faDollarSign"],
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 11
+    }
+  })), __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["MenuNav"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
       columnNumber: 9
     }
   }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["Menu"], {
@@ -17341,7 +17357,7 @@ var AppLayout = function AppLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
+      lineNumber: 31,
       columnNumber: 11
     }
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__["FontAwesomeIcon"], {
@@ -17349,14 +17365,14 @@ var AppLayout = function AppLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 32,
       columnNumber: 13
     }
   })), __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["Login"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 34,
       columnNumber: 11
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -17364,14 +17380,14 @@ var AppLayout = function AppLayout(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26,
+      lineNumber: 35,
       columnNumber: 13
     }
   }, "\uB85C\uADF8\uC778")))), openModal ? __jsx(_MenuModal_index__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 39,
       columnNumber: 20
     }
   }, "1") : "", children);

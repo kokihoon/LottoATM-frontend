@@ -1,5 +1,38 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/_app.js"],{
 
+/***/ "./fonts/BMJUA.otf":
+/*!*************************!*\
+  !*** ./fonts/BMJUA.otf ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/BMJUA.8f42e469b8e6e7c41e18ea11c53a057f.otf";
+
+/***/ }),
+
+/***/ "./fonts/BMJUA.woff":
+/*!**************************!*\
+  !*** ./fonts/BMJUA.woff ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/BMJUA.d43a7650a42cfad53d279267a63af56d.woff";
+
+/***/ }),
+
+/***/ "./fonts/BMJUA.woff2":
+/*!***************************!*\
+  !*** ./fonts/BMJUA.woff2 ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/BMJUA.3355b034c40bfd43e5c6d12e47fe5247.woff2";
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
@@ -358,8 +391,16 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Imports
+var ___CSS_LOADER_GET_URL_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL_PURE_IMPORT_0___ = __webpack_require__(/*! ../fonts/BMJUA.otf */ "./fonts/BMJUA.otf");
+var ___CSS_LOADER_URL_PURE_IMPORT_1___ = __webpack_require__(/*! ../fonts//BMJUA.woff */ "./fonts/BMJUA.woff");
+var ___CSS_LOADER_URL_PURE_IMPORT_2___ = __webpack_require__(/*! ../fonts/BMJUA.woff2 */ "./fonts/BMJUA.woff2");
+var ___CSS_LOADER_URL_IMPORT_0___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_PURE_IMPORT_0___);
+var ___CSS_LOADER_URL_IMPORT_1___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_PURE_IMPORT_1___);
+var ___CSS_LOADER_URL_IMPORT_2___ = ___CSS_LOADER_GET_URL_IMPORT___(___CSS_LOADER_URL_PURE_IMPORT_2___);
 // Module
-exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  color: #333;\n}\na {\n  text-decoration: none;\n}\n\n#__next {\n  height: 100%;\n}\nli {\n  list-style: none;\n}\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer;\n}\n\nbody {\n  height: 100%;\n  padding-top: 50px;\n  background-color: #f7f8fb;\n}\n\nhtml {\n  height: 100%;\n}\n", "",{"version":3,"sources":["/Users/kihoonko/Desktop/lottoATM-frontend/styles/reset.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;EACtB,WAAW;AACb;AACA;EACE,qBAAqB;AACvB;;AAEA;EACE,YAAY;AACd;AACA;EACE,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,yBAAyB;AAC3B;;AAEA;EACE,YAAY;AACd","file":"reset.css","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  color: #333;\n}\na {\n  text-decoration: none;\n}\n\n#__next {\n  height: 100%;\n}\nli {\n  list-style: none;\n}\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer;\n}\n\nbody {\n  height: 100%;\n  padding-top: 50px;\n  background-color: #f7f8fb;\n}\n\nhtml {\n  height: 100%;\n}\n"]}]);
+exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\na {\n  text-decoration: none;\n}\na:link {\n  text-decoration: none;\n  color: #333;\n}\na:visited {\n  text-decoration: none;\n  color: #333;\n}\na:active {\n  text-decoration: none;\n  color: #333;\n}\na:hover {\n  text-decoration: none;\n  color: #333;\n}\n\n#__next {\n  height: 100%;\n}\nli {\n  list-style: none;\n}\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer;\n}\n\nbody {\n  height: 100%;\n  padding-top: 50px;\n  background-color: #f7f8fb;\n}\n\nhtml,\nbody,\ninput,\nbutton {\n  height: 100%;\n  font-family: \"jua\";\n}\n\n@font-face {\n  font-family: \"jua\";\n  src: url(" + ___CSS_LOADER_URL_IMPORT_0___ + ") format(\"otf\"),\n    url(" + ___CSS_LOADER_URL_IMPORT_1___ + ") format(\"woff\"),\n    url(" + ___CSS_LOADER_URL_IMPORT_2___ + ") format(\"woff2\");\n}\n", "",{"version":3,"sources":["/Users/kihoonko/Desktop/lottoATM-frontend/styles/reset.css"],"names":[],"mappings":"AAAA;EACE,SAAS;EACT,UAAU;EACV,sBAAsB;AACxB;AACA;EACE,qBAAqB;AACvB;AACA;EACE,qBAAqB;EACrB,WAAW;AACb;AACA;EACE,qBAAqB;EACrB,WAAW;AACb;AACA;EACE,qBAAqB;EACrB,WAAW;AACb;AACA;EACE,qBAAqB;EACrB,WAAW;AACb;;AAEA;EACE,YAAY;AACd;AACA;EACE,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,YAAY;EACZ,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,iBAAiB;EACjB,yBAAyB;AAC3B;;AAEA;;;;EAIE,YAAY;EACZ,kBAAkB;AACpB;;AAEA;EACE,kBAAkB;EAClB;;sDAE6C;AAC/C","file":"reset.css","sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\na {\n  text-decoration: none;\n}\na:link {\n  text-decoration: none;\n  color: #333;\n}\na:visited {\n  text-decoration: none;\n  color: #333;\n}\na:active {\n  text-decoration: none;\n  color: #333;\n}\na:hover {\n  text-decoration: none;\n  color: #333;\n}\n\n#__next {\n  height: 100%;\n}\nli {\n  list-style: none;\n}\n\nbutton {\n  outline: none;\n  border: none;\n  cursor: pointer;\n}\n\nbody {\n  height: 100%;\n  padding-top: 50px;\n  background-color: #f7f8fb;\n}\n\nhtml,\nbody,\ninput,\nbutton {\n  height: 100%;\n  font-family: \"jua\";\n}\n\n@font-face {\n  font-family: \"jua\";\n  src: url(\"../fonts/BMJUA.otf\") format(\"otf\"),\n    url(\"../fonts//BMJUA.woff\") format(\"woff\"),\n    url(\"../fonts/BMJUA.woff2\") format(\"woff2\");\n}\n"]}]);
 
 
 /***/ }),
@@ -462,6 +503,51 @@ function toComment(sourceMap) {
   var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
   return "/*# ".concat(data, " */");
 }
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    // eslint-disable-next-line no-param-reassign
+    options = {};
+  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+
+
+  url = url && url.__esModule ? url.default : url;
+
+  if (typeof url !== 'string') {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    // eslint-disable-next-line no-param-reassign
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, '\\n'), "\"");
+  }
+
+  return url;
+};
 
 /***/ }),
 
