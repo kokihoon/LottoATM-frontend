@@ -1,6 +1,6 @@
 import React from "react";
-import AppLayout from "../components/AppLoayout";
-import MainComponent from "../components/MainComponent";
+import AppLayout from "../src/components/AppLoayout";
+import MainComponent from "../src/components/MainComponent";
 
 const Home = () => {
   return (

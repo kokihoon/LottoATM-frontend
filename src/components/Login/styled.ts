@@ -26,6 +26,7 @@ export const LoginForm = styled.div`
 export const Logo = styled.div`
   text-align: center;
   margin-bottom: 20px;
+  color: #dbbf41;
 `;
 
 export const LoginTitle = styled.div`
@@ -84,4 +85,6 @@ export const LoginButton = styled.button`
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+  background-color: #00a000;
+  color: white;
 `;

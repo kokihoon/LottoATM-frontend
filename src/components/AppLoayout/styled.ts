@@ -18,7 +18,7 @@ export const NavLayout = styled.div`
 `;
 
 export const LayoutLogo = styled.div`
-  color: #333;
+  color: #dbbf41;
   margin: 15px;
 `;
 

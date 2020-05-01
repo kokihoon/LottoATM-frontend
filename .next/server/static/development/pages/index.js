@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -112,449 +112,6 @@ module.exports = require("next/dist/next-server/lib/router-context.js");
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/lib/utils.js");
-
-/***/ }),
-
-/***/ "./components/AppLoayout/index.tsx":
-/*!*****************************************!*\
-  !*** ./components/AppLoayout/index.tsx ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styled */ "./components/AppLoayout/styled.ts");
-/* harmony import */ var _MenuModal_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../MenuModal/index */ "./components/MenuModal/index.tsx");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "@fortawesome/free-solid-svg-icons");
-/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "@fortawesome/react-fontawesome");
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/components/AppLoayout/index.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-
-
-
-const AppLayout = ({
-  children
-}) => {
-  const {
-    0: openModal,
-    1: setOpenModal
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
-
-  const handleModal = () => {
-    setOpenModal(!openModal);
-  };
-
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["NavLayout"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 7
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["LayoutLogo"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 9
-    }
-  }, "LottoATM"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["MenuNav"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 9
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["Menu"], {
-    onClick: handleModal,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 11
-    }
-  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__["FontAwesomeIcon"], {
-    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faGripHorizontal"],
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 13
-    }
-  })), __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["Login"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 11
-    }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "accounts",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 13
-    }
-  }, "\uB85C\uADF8\uC778")))), openModal ? __jsx(_MenuModal_index__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30,
-      columnNumber: 20
-    }
-  }, "1") : "", children);
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (AppLayout);
-
-/***/ }),
-
-/***/ "./components/AppLoayout/styled.ts":
-/*!*****************************************!*\
-  !*** ./components/AppLoayout/styled.ts ***!
-  \*****************************************/
-/*! exports provided: NavLayout, LayoutLogo, MenuNav, Menu, Login */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavLayout", function() { return NavLayout; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutLogo", function() { return LayoutLogo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuNav", function() { return MenuNav; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Menu", function() { return Menu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const NavLayout = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__NavLayout",
-  componentId: "sc-263gxd-0"
-})(["height:69px;left:0;width:100%;background:#fff;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);height:50px;position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;"]);
-const LayoutLogo = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__LayoutLogo",
-  componentId: "sc-263gxd-1"
-})(["color:#333;margin:15px;"]);
-const MenuNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__MenuNav",
-  componentId: "sc-263gxd-2"
-})(["display:flex;"]);
-const Menu = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__Menu",
-  componentId: "sc-263gxd-3"
-})(["font-size:20px;margin:12px;cursor:pointer;"]);
-const Login = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__Login",
-  componentId: "sc-263gxd-4"
-})(["color:#333;margin:15px;"]);
-
-/***/ }),
-
-/***/ "./components/MainComponent/index.tsx":
-/*!********************************************!*\
-  !*** ./components/MainComponent/index.tsx ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styled */ "./components/MainComponent/styled.ts");
-var _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/components/MainComponent/index.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-const MainComponent = () => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["MainLayout"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16,
-      columnNumber: 7
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["MainHeader"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 9
-    }
-  }, "907\uD68C \uB2F9\uCCA8\uACB0\uACFC"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["SubMainHeader"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 9
-    }
-  }, "(2020\uB144 04\uC6D4 18\uC77C \uCD94\uCCA8)"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["BallNav"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 9
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["GeneralNumberNav"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 11
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
-    color: "#FF7272",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 13
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 15
-    }
-  }, "21")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
-    color: "#FF7272",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 13
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 15
-    }
-  }, "27")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
-    color: "#FF7272",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 13
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 15
-    }
-  }, "29")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
-    color: "#AAAAAA",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30,
-      columnNumber: 13
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31,
-      columnNumber: 15
-    }
-  }, "38")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
-    color: "#AAAAAA",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 13
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 15
-    }
-  }, "40")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
-    color: "#B0D840",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 13
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 15
-    }
-  }, "44"))), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["PlusNav"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 11
-    }
-  }, __jsx("img", {
-    src: "/images/plus_sign.png",
-    alt: "my image",
-    height: "50px;",
-    width: "50px;",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41,
-      columnNumber: 13
-    }
-  })), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["GeneralNumberNav"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48,
-      columnNumber: 11
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
-    color: "#AAAAAA",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49,
-      columnNumber: 13
-    }
-  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50,
-      columnNumber: 15
-    }
-  }, "37"))))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (MainComponent);
-
-/***/ }),
-
-/***/ "./components/MainComponent/styled.ts":
-/*!********************************************!*\
-  !*** ./components/MainComponent/styled.ts ***!
-  \********************************************/
-/*! exports provided: MainLayout, MainHeader, SubMainHeader, BallNav, GeneralNumberNav, NumberBall, Number, PlusNav */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainLayout", function() { return MainLayout; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainHeader", function() { return MainHeader; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubMainHeader", function() { return SubMainHeader; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BallNav", function() { return BallNav; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GeneralNumberNav", function() { return GeneralNumberNav; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NumberBall", function() { return NumberBall; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Number", function() { return Number; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlusNav", function() { return PlusNav; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const MainLayout = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__MainLayout",
-  componentId: "sc-21n40s-0"
-})(["background:#fff;display:flex;flex-direction:column;align-items:center;height:100%;"]);
-const MainHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__MainHeader",
-  componentId: "sc-21n40s-1"
-})(["color:#d43301;font-size:3rem;margin-top:6%;"]);
-const SubMainHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__SubMainHeader",
-  componentId: "sc-21n40s-2"
-})(["color:#707070;"]);
-const BallNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__BallNav",
-  componentId: "sc-21n40s-3"
-})(["display:flex;margin-top:3%;"]);
-const GeneralNumberNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__GeneralNumberNav",
-  componentId: "sc-21n40s-4"
-})(["background-color:#f0f8ff;display:flex;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);border-radius:15px;"]);
-const NumberBall = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__NumberBall",
-  componentId: "sc-21n40s-5"
-})(["display:flex;width:120px;height:120px;border-radius:50%;background-color:", ";box-shadow:inset -25px -15px 40px rgba(0,0,0,0.3);background-image:linear-gradient( -45deg,rgba(255,255,220,0.3) 0%,transparent 100% );margin:20px;"], props => props.color);
-const Number = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.span.withConfig({
-  displayName: "styled__Number",
-  componentId: "sc-21n40s-6"
-})(["display:flex;justify-content:center;align-items:center;width:100%;font-size:3rem;color:#fff;"]);
-const PlusNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__PlusNav",
-  componentId: "sc-21n40s-7"
-})(["display:flex;margin:15px;justify-content:center;align-items:center;"]);
-
-/***/ }),
-
-/***/ "./components/MenuModal/index.tsx":
-/*!****************************************!*\
-  !*** ./components/MenuModal/index.tsx ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styled */ "./components/MenuModal/styled.ts");
-var _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/components/MenuModal/index.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-const MenuModal = () => {
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["MenuModalNav"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 7
-    }
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (MenuModal);
-
-/***/ }),
-
-/***/ "./components/MenuModal/styled.ts":
-/*!****************************************!*\
-  !*** ./components/MenuModal/styled.ts ***!
-  \****************************************/
-/*! exports provided: MenuModalNav */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuModalNav", function() { return MenuModalNav; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const MenuModalNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
-  displayName: "styled__MenuModalNav",
-  componentId: "jr0bnh-0"
-})(["margin:15px;height:400px;width:25%;position:fixed;top:50px;right:0;background-color:#fff;border-radius:15px;margin:10px;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);"]);
 
 /***/ }),
 
@@ -2238,8 +1795,8 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_AppLoayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AppLoayout */ "./components/AppLoayout/index.tsx");
-/* harmony import */ var _components_MainComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MainComponent */ "./components/MainComponent/index.tsx");
+/* harmony import */ var _src_components_AppLoayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/components/AppLoayout */ "./src/components/AppLoayout/index.tsx");
+/* harmony import */ var _src_components_MainComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../src/components/MainComponent */ "./src/components/MainComponent/index.tsx");
 var _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/pages/index.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2247,14 +1804,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const Home = () => {
-  return __jsx(_components_AppLoayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return __jsx(_src_components_AppLoayout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7,
       columnNumber: 5
     }
-  }, __jsx(_components_MainComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(_src_components_MainComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -2268,7 +1825,450 @@ const Home = () => {
 
 /***/ }),
 
-/***/ 3:
+/***/ "./src/components/AppLoayout/index.tsx":
+/*!*********************************************!*\
+  !*** ./src/components/AppLoayout/index.tsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styled */ "./src/components/AppLoayout/styled.ts");
+/* harmony import */ var _MenuModal_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../MenuModal/index */ "./src/components/MenuModal/index.tsx");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-solid-svg-icons */ "@fortawesome/free-solid-svg-icons");
+/* harmony import */ var _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "@fortawesome/react-fontawesome");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/src/components/AppLoayout/index.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+const AppLayout = ({
+  children
+}) => {
+  const {
+    0: openModal,
+    1: setOpenModal
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+
+  const handleModal = () => {
+    setOpenModal(!openModal);
+  };
+
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["NavLayout"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 7
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["LayoutLogo"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 9
+    }
+  }, "LottoATM"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["MenuNav"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 9
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["Menu"], {
+    onClick: handleModal,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 11
+    }
+  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__["FontAwesomeIcon"], {
+    icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faGripHorizontal"],
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 13
+    }
+  })), __jsx(_styled__WEBPACK_IMPORTED_MODULE_2__["Login"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 11
+    }
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "accounts",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 13
+    }
+  }, "\uB85C\uADF8\uC778")))), openModal ? __jsx(_MenuModal_index__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 20
+    }
+  }, "1") : "", children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (AppLayout);
+
+/***/ }),
+
+/***/ "./src/components/AppLoayout/styled.ts":
+/*!*********************************************!*\
+  !*** ./src/components/AppLoayout/styled.ts ***!
+  \*********************************************/
+/*! exports provided: NavLayout, LayoutLogo, MenuNav, Menu, Login */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavLayout", function() { return NavLayout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LayoutLogo", function() { return LayoutLogo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuNav", function() { return MenuNav; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Menu", function() { return Menu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Login", function() { return Login; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const NavLayout = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__NavLayout",
+  componentId: "ziv1eo-0"
+})(["height:69px;left:0;width:100%;background:#fff;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);height:50px;position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;"]);
+const LayoutLogo = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__LayoutLogo",
+  componentId: "ziv1eo-1"
+})(["color:#dbbf41;margin:15px;"]);
+const MenuNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__MenuNav",
+  componentId: "ziv1eo-2"
+})(["display:flex;"]);
+const Menu = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__Menu",
+  componentId: "ziv1eo-3"
+})(["font-size:20px;margin:12px;cursor:pointer;"]);
+const Login = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__Login",
+  componentId: "ziv1eo-4"
+})(["color:#333;margin:15px;"]);
+
+/***/ }),
+
+/***/ "./src/components/MainComponent/index.tsx":
+/*!************************************************!*\
+  !*** ./src/components/MainComponent/index.tsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styled */ "./src/components/MainComponent/styled.ts");
+var _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/src/components/MainComponent/index.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const MainComponent = () => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["MainLayout"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 7
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["MainHeader"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
+    }
+  }, "907\uD68C \uB2F9\uCCA8\uACB0\uACFC"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["SubMainHeader"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 9
+    }
+  }, "(2020\uB144 04\uC6D4 18\uC77C \uCD94\uCCA8)"), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["BallNav"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 9
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["GeneralNumberNav"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 11
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#FF7272",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 15
+    }
+  }, "21")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#FF7272",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 15
+    }
+  }, "27")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#FF7272",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 15
+    }
+  }, "29")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#AAAAAA",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 15
+    }
+  }, "38")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#AAAAAA",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 15
+    }
+  }, "40")), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#B0D840",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 15
+    }
+  }, "44"))), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["PlusNav"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 11
+    }
+  }, __jsx("img", {
+    src: "/images/plus_sign.png",
+    alt: "my image",
+    height: "50px;",
+    width: "50px;",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 13
+    }
+  })), __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["GeneralNumberNav"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 11
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["NumberBall"], {
+    color: "#AAAAAA",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 13
+    }
+  }, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["Number"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 15
+    }
+  }, "37"))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MainComponent);
+
+/***/ }),
+
+/***/ "./src/components/MainComponent/styled.ts":
+/*!************************************************!*\
+  !*** ./src/components/MainComponent/styled.ts ***!
+  \************************************************/
+/*! exports provided: MainLayout, MainHeader, SubMainHeader, BallNav, GeneralNumberNav, NumberBall, Number, PlusNav */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainLayout", function() { return MainLayout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MainHeader", function() { return MainHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubMainHeader", function() { return SubMainHeader; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BallNav", function() { return BallNav; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GeneralNumberNav", function() { return GeneralNumberNav; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NumberBall", function() { return NumberBall; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Number", function() { return Number; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlusNav", function() { return PlusNav; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const MainLayout = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__MainLayout",
+  componentId: "sc-1h8z21o-0"
+})(["background:#fff;display:flex;flex-direction:column;align-items:center;height:100%;"]);
+const MainHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__MainHeader",
+  componentId: "sc-1h8z21o-1"
+})(["color:#d43301;font-size:3rem;margin-top:6%;"]);
+const SubMainHeader = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__SubMainHeader",
+  componentId: "sc-1h8z21o-2"
+})(["color:#707070;"]);
+const BallNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__BallNav",
+  componentId: "sc-1h8z21o-3"
+})(["display:flex;margin-top:3%;"]);
+const GeneralNumberNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__GeneralNumberNav",
+  componentId: "sc-1h8z21o-4"
+})(["background-color:#f0f8ff;display:flex;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);border-radius:15px;"]);
+const NumberBall = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__NumberBall",
+  componentId: "sc-1h8z21o-5"
+})(["display:flex;width:120px;height:120px;border-radius:50%;background-color:", ";box-shadow:inset -25px -15px 40px rgba(0,0,0,0.3);background-image:linear-gradient( -45deg,rgba(255,255,220,0.3) 0%,transparent 100% );margin:20px;"], props => props.color);
+const Number = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.span.withConfig({
+  displayName: "styled__Number",
+  componentId: "sc-1h8z21o-6"
+})(["display:flex;justify-content:center;align-items:center;width:100%;font-size:3rem;color:#fff;"]);
+const PlusNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__PlusNav",
+  componentId: "sc-1h8z21o-7"
+})(["display:flex;margin:15px;justify-content:center;align-items:center;"]);
+
+/***/ }),
+
+/***/ "./src/components/MenuModal/index.tsx":
+/*!********************************************!*\
+  !*** ./src/components/MenuModal/index.tsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styled */ "./src/components/MenuModal/styled.ts");
+var _jsxFileName = "/Users/kihoonko/Desktop/lottoATM-frontend/src/components/MenuModal/index.tsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const MenuModal = () => {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_styled__WEBPACK_IMPORTED_MODULE_1__["MenuModalNav"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 7
+    }
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MenuModal);
+
+/***/ }),
+
+/***/ "./src/components/MenuModal/styled.ts":
+/*!********************************************!*\
+  !*** ./src/components/MenuModal/styled.ts ***!
+  \********************************************/
+/*! exports provided: MenuModalNav */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuModalNav", function() { return MenuModalNav; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const MenuModalNav = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styled__MenuModalNav",
+  componentId: "gzimv8-0"
+})(["margin:15px;height:400px;width:25%;position:fixed;top:50px;right:0;background-color:#fff;border-radius:15px;margin:10px;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);"]);
+
+/***/ }),
+
+/***/ 4:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/
