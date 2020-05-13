@@ -6,7 +6,6 @@ export const NavLayout = styled.div`
   width: 100%;
   background: #fff;
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-
   height: 50px;
   position: fixed;
   top: 0;
@@ -18,23 +17,21 @@ export const NavLayout = styled.div`
 `;
 
 export const LayoutLogo = styled.div`
-  color: #333;
+  color: #dbbf41;
   margin: 15px;
+`;
+
+export const MenuNav = styled.div`
+  display: flex;
+`;
+
+export const Menu = styled.div`
+  font-size: 20px;
+  margin: 12px;
+  cursor: pointer;
 `;
 
 export const Login = styled.div`
   color: #333;
   margin: 15px;
-`;
-
-export const MenuModal = styled.div`
-  height: 200px;
-  width: 30%;
-  position: fixed;
-  top: 50px;
-  right: 0;
-  background-color: #fff;
-  border-radius: 15px;
-  margin: 10px;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 `;
