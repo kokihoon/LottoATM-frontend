@@ -7,6 +7,8 @@ import {
   faMoneyBillWave,
   faDollarSign
 } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
+import { IRootState } from "../../store/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Props {
@@ -15,6 +17,8 @@ interface Props {
 
 const AppLayout: React.FunctionComponent<Props> = ({ children }: Props) => {
   const [openModal, setOpenModal] = useState(false);
+
+  const { isLoggedIn } = useSelector((state: IRootState) => state.auth.user);
 
   const handleModal = () => {
     setOpenModal(!openModal);
@@ -31,9 +35,13 @@ const AppLayout: React.FunctionComponent<Props> = ({ children }: Props) => {
           <Menu onClick={handleModal}>
             <FontAwesomeIcon icon={faGripHorizontal} />
           </Menu>
-          <Login>
-            <Link href="accounts">로그인</Link>
-          </Login>
+          {isLoggedIn ? (
+            <Login>회원님</Login>
+          ) : (
+            <Login>
+              <Link href="accounts">로그인</Link>
+            </Login>
+          )}
         </MenuNav>
       </NavLayout>
       {openModal ? <MenuModal>1</MenuModal> : ""}

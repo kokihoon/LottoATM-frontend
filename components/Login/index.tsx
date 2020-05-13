@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   LoginNav,
   LoginForm,
@@ -10,11 +10,14 @@ import {
   PasswordInput,
   LoginButton
 } from "./styled";
+import { IRootState } from "../../store/index";
+import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMoneyBillWave,
   faDollarSign
 } from "@fortawesome/free-solid-svg-icons";
+import { loginActions } from "../../action/auth";
 
 const Login = () => {
   const [email, setEamil] = useState("");
@@ -23,6 +26,10 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
+  const dispatch = useDispatch();
+  const { error, authStatus } = useSelector(
+    (state: IRootState) => state.auth.login
+  );
   const handleEmail = (e: React.FormEvent<HTMLInputElement>): void => {
     setEamil(e.currentTarget.value);
     setEmailError("");
@@ -35,17 +42,34 @@ const Login = () => {
 
   const enterPasswordCheck = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      //onEmailLogin();
+      onLogin();
     }
   };
 
-  const onLogin = () => {
+  const onLogin = async () => {
     const params = {
-      email,
+      username: email,
       password
     };
+    const emailRule = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    if (emailRule.test(email)) {
+      await dispatch(loginActions.loginRequest(params));
+    } else {
+      setEmailError("올바른 이메일 형식을 입력해주세요.");
+    }
+
     console.log(email, password);
   };
+
+  useEffect(() => {
+    if (error == "passwordError") {
+      setPasswordError("비밀번호가 틀립니다.");
+    }
+
+    if (authStatus == "SUCCESS") {
+      document.location.href = "/";
+    }
+  }, [error, authStatus]);
 
   return (
     <LoginNav>
