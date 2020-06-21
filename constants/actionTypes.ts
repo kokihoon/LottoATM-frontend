@@ -20,3 +20,4 @@ function createRequestTypes(base: string): createRequestTypes {
 export const POST_LOGIN = createRequestTypes("POST_LOGIN");
 export const POST_LOGOUT = "POST_LOGOUT";
 export const SET_LOGGED_INFO = "SET_LOGGED_INFO";
+export const POST_SIGNUP = createRequestTypes("POST_SIGNUP");

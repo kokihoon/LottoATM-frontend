@@ -38,9 +38,14 @@ const AppLayout: React.FunctionComponent<Props> = ({ children }: Props) => {
           {isLoggedIn ? (
             <Login>회원님</Login>
           ) : (
-            <Login>
-              <Link href="accounts">로그인</Link>
-            </Login>
+            <>
+              <Login>
+                <Link href="accounts">로그인</Link>
+              </Login>
+              <Login>
+                <Link href="signup">회원가입</Link>
+              </Login>
+            </>
           )}
         </MenuNav>
       </NavLayout>

@@ -57,8 +57,6 @@ const Login = () => {
     } else {
       setEmailError("올바른 이메일 형식을 입력해주세요.");
     }
-
-    console.log(email, password);
   };
 
   useEffect(() => {

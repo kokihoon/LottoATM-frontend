@@ -1,15 +1,18 @@
 import { all, fork, call, take, put } from "redux-saga/effects";
-import { postLogin } from "../api/auth";
+import { postLogin, postSignUp } from "../api/auth";
 import {
   AuthAction,
   Login,
   loginActions,
   setLoggedAction,
-  SetLoggedInfo
+  SetLoggedInfo,
+  SignUp,
+  signUpActions
 } from "../action/auth";
 import * as types from "../constants/actionTypes";
 import localStorage from "../utils/localStorage";
 
+// 로그인
 export function* fetchLogin(action: Login) {
   try {
     console.log(action.payload);
@@ -28,8 +31,26 @@ function* watchFetchLogin() {
   }
 }
 
+// 회원가입
+export function* fetchSignUp(action: SignUp) {
+  try {
+    console.log(action.payload);
+    const { data } = yield call(postSignUp, action.payload);
+    yield put<AuthAction>(signUpActions.signUpSuccess());
+  } catch (error) {
+    yield put<AuthAction>(signUpActions.signUpFailure());
+  }
+}
+
+function* watchFetchSignUp() {
+  while (true) {
+    const action: AuthAction = yield take(types.POST_SIGNUP[types.REQUEST]);
+    yield fork(fetchSignUp, action);
+  }
+}
+
 export default function* root() {
-  yield all([fork(watchFetchLogin)]);
+  yield all([fork(watchFetchLogin), fork(watchFetchSignUp)]);
 
   const token = localStorage.get("USER-KEY");
 
