@@ -15,3 +15,11 @@ export interface IAuthLogin {
   password?: string;
   error?: string;
 }
+
+export interface IAuthSignUp {
+  authStatus?: string;
+  email: string;
+  password: string;
+  username: string;
+  error?: string;
+}

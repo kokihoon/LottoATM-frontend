@@ -25,12 +25,13 @@ function createAction(type, payload) {
 /*!************************!*\
   !*** ./action/auth.ts ***!
   \************************/
-/*! exports provided: loginActions, setLoggedAction, logout */
+/*! exports provided: loginActions, signUpActions, setLoggedAction, logout */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginActions", function() { return loginActions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signUpActions", function() { return signUpActions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setLoggedAction", function() { return setLoggedAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony import */ var _constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants/actionTypes */ "./constants/actionTypes.ts");
@@ -48,6 +49,17 @@ var loginActions = {
     return Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_LOGIN"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["FAILURE"]]);
   }
 };
+var signUpActions = {
+  signUpRequest: function signUpRequest(payload) {
+    return Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["REQUEST"]], payload);
+  },
+  signUpSuccess: function signUpSuccess() {
+    return Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["SUCCESS"]]);
+  },
+  signUpFailure: function signUpFailure() {
+    return Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["FAILURE"]]);
+  }
+};
 var setLoggedAction = function setLoggedAction() {
   return Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["SET_LOGGED_INFO"]);
 };
@@ -63,12 +75,13 @@ var logout = function logout() {
 /*!*********************!*\
   !*** ./api/auth.ts ***!
   \*********************/
-/*! exports provided: postLogin */
+/*! exports provided: postLogin, postSignUp */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "postLogin", function() { return postLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "postSignUp", function() { return postSignUp; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index */ "./api/index.ts");
@@ -88,6 +101,24 @@ var postLogin = function postLogin(payload) {
         case 3:
         case "end":
           return _context.stop();
+      }
+    }
+  }, null, null, null, Promise);
+};
+var postSignUp = function postSignUp(payload) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function postSignUp$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.next = 2;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(_index__WEBPACK_IMPORTED_MODULE_1__["default"].post("/signup", payload));
+
+        case 2:
+          return _context2.abrupt("return", _context2.sent);
+
+        case 3:
+        case "end":
+          return _context2.stop();
       }
     }
   }, null, null, null, Promise);
@@ -122,7 +153,7 @@ var Api = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
 /*!**********************************!*\
   !*** ./constants/actionTypes.ts ***!
   \**********************************/
-/*! exports provided: REQUEST, SUCCESS, FAILURE, POST_LOGIN, POST_LOGOUT, SET_LOGGED_INFO */
+/*! exports provided: REQUEST, SUCCESS, FAILURE, POST_LOGIN, POST_LOGOUT, SET_LOGGED_INFO, POST_SIGNUP */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -133,6 +164,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_LOGIN", function() { return POST_LOGIN; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_LOGOUT", function() { return POST_LOGOUT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_LOGGED_INFO", function() { return SET_LOGGED_INFO; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_SIGNUP", function() { return POST_SIGNUP; });
 var REQUEST = "REQUEST";
 var SUCCESS = "SUCCESS";
 var FAILURE = "FAILURE";
@@ -148,6 +180,7 @@ function createRequestTypes(base) {
 var POST_LOGIN = createRequestTypes("POST_LOGIN");
 var POST_LOGOUT = "POST_LOGOUT";
 var SET_LOGGED_INFO = "SET_LOGGED_INFO";
+var POST_SIGNUP = createRequestTypes("POST_SIGNUP");
 
 /***/ }),
 
@@ -12364,12 +12397,13 @@ LottoATM.getInitialProps = function _callee(_ref2) {
 /*!**********************!*\
   !*** ./saga/auth.ts ***!
   \**********************/
-/*! exports provided: fetchLogin, default */
+/*! exports provided: fetchLogin, fetchSignUp, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchLogin", function() { return fetchLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSignUp", function() { return fetchSignUp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return root; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
@@ -12382,12 +12416,15 @@ __webpack_require__.r(__webpack_exports__);
 
 var _marked = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(fetchLogin),
     _marked2 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(watchFetchLogin),
-    _marked3 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(root);
+    _marked3 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(fetchSignUp),
+    _marked4 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(watchFetchSignUp),
+    _marked5 = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(root);
 
 
 
 
 
+ // 로그인
 
 function fetchLogin(action) {
   var _yield$call, data;
@@ -12452,34 +12489,99 @@ function watchFetchLogin() {
       }
     }
   }, _marked2);
+} // 회원가입
+
+
+function fetchSignUp(action) {
+  var _yield$call2, data;
+
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function fetchSignUp$(_context3) {
+    while (1) {
+      switch (_context3.prev = _context3.next) {
+        case 0:
+          _context3.prev = 0;
+          console.log(action.payload);
+          _context3.next = 4;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["call"])(_api_auth__WEBPACK_IMPORTED_MODULE_2__["postSignUp"], action.payload);
+
+        case 4:
+          _yield$call2 = _context3.sent;
+          data = _yield$call2.data;
+          _context3.next = 8;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])(_action_auth__WEBPACK_IMPORTED_MODULE_3__["signUpActions"].signUpSuccess());
+
+        case 8:
+          _context3.next = 14;
+          break;
+
+        case 10:
+          _context3.prev = 10;
+          _context3.t0 = _context3["catch"](0);
+          _context3.next = 14;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])(_action_auth__WEBPACK_IMPORTED_MODULE_3__["signUpActions"].signUpFailure());
+
+        case 14:
+        case "end":
+          return _context3.stop();
+      }
+    }
+  }, _marked3, null, [[0, 10]]);
+}
+
+function watchFetchSignUp() {
+  var action;
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function watchFetchSignUp$(_context4) {
+    while (1) {
+      switch (_context4.prev = _context4.next) {
+        case 0:
+          if (false) {}
+
+          _context4.next = 3;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["take"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_4__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_4__["REQUEST"]]);
+
+        case 3:
+          action = _context4.sent;
+          _context4.next = 6;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["fork"])(fetchSignUp, action);
+
+        case 6:
+          _context4.next = 0;
+          break;
+
+        case 8:
+        case "end":
+          return _context4.stop();
+      }
+    }
+  }, _marked4);
 }
 
 function root() {
   var token;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function root$(_context3) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function root$(_context5) {
     while (1) {
-      switch (_context3.prev = _context3.next) {
+      switch (_context5.prev = _context5.next) {
         case 0:
-          _context3.next = 2;
-          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["fork"])(watchFetchLogin)]);
+          _context5.next = 2;
+          return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["fork"])(watchFetchLogin), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["fork"])(watchFetchSignUp)]);
 
         case 2:
           token = _utils_localStorage__WEBPACK_IMPORTED_MODULE_5__["default"].get("USER-KEY");
 
           if (!token) {
-            _context3.next = 6;
+            _context5.next = 6;
             break;
           }
 
-          _context3.next = 6;
+          _context5.next = 6;
           return Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_1__["put"])(Object(_action_auth__WEBPACK_IMPORTED_MODULE_3__["setLoggedAction"])());
 
         case 6:
         case "end":
-          return _context3.stop();
+          return _context5.stop();
       }
     }
-  }, _marked3);
+  }, _marked5);
 }
 
 /***/ }),
@@ -12551,6 +12653,13 @@ var initialState = {
     password: "",
     authStatus: "INIT",
     error: ""
+  },
+  signup: {
+    error: "",
+    email: "",
+    password: "",
+    username: "",
+    authStatus: "INIT"
   }
 };
 
@@ -12593,6 +12702,26 @@ var authReducer = function authReducer() {
       case _constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["SET_LOGGED_INFO"]:
         {
           draft.user.isLoggedIn = true;
+          return draft;
+        }
+
+      case _constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["REQUEST"]]:
+        {
+          draft.signup.authStatus = "INIT";
+          draft.login.error = "";
+          return draft;
+        }
+
+      case _constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["SUCCESS"]]:
+        {
+          draft.signup.authStatus = "SUCCESS";
+          return draft;
+        }
+
+      case _constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["FAILURE"]]:
+        {
+          draft.signup.authStatus = "FAILTURE";
+          draft.signup.error = "Error";
           return draft;
         }
     }

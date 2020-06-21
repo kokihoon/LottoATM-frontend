@@ -118,12 +118,13 @@ function createAction(type, payload) {
 /*!************************!*\
   !*** ./action/auth.ts ***!
   \************************/
-/*! exports provided: loginActions, setLoggedAction, logout */
+/*! exports provided: loginActions, signUpActions, setLoggedAction, logout */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loginActions", function() { return loginActions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "signUpActions", function() { return signUpActions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setLoggedAction", function() { return setLoggedAction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony import */ var _constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants/actionTypes */ "./constants/actionTypes.ts");
@@ -134,6 +135,11 @@ const loginActions = {
   loginRequest: payload => Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_LOGIN"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["REQUEST"]], payload),
   loginSuccess: payload => Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_LOGIN"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["SUCCESS"]], payload),
   loginFailure: () => Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_LOGIN"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["FAILURE"]])
+};
+const signUpActions = {
+  signUpRequest: payload => Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["REQUEST"]], payload),
+  signUpSuccess: () => Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["SUCCESS"]]),
+  signUpFailure: () => Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["FAILURE"]])
 };
 const setLoggedAction = () => Object(_action_helper__WEBPACK_IMPORTED_MODULE_1__["createAction"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_0__["SET_LOGGED_INFO"]);
 const logout = () => ({
@@ -146,16 +152,20 @@ const logout = () => ({
 /*!*********************!*\
   !*** ./api/auth.ts ***!
   \*********************/
-/*! exports provided: postLogin */
+/*! exports provided: postLogin, postSignUp */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "postLogin", function() { return postLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "postSignUp", function() { return postSignUp; });
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./api/index.ts");
 
 const postLogin = async payload => {
   return await _index__WEBPACK_IMPORTED_MODULE_0__["default"].post("/signin", payload);
+};
+const postSignUp = async payload => {
+  return await _index__WEBPACK_IMPORTED_MODULE_0__["default"].post("/signup", payload);
 };
 
 /***/ }),
@@ -187,7 +197,7 @@ const Api = axios__WEBPACK_IMPORTED_MODULE_0___default.a.create({
 /*!**********************************!*\
   !*** ./constants/actionTypes.ts ***!
   \**********************************/
-/*! exports provided: REQUEST, SUCCESS, FAILURE, POST_LOGIN, POST_LOGOUT, SET_LOGGED_INFO */
+/*! exports provided: REQUEST, SUCCESS, FAILURE, POST_LOGIN, POST_LOGOUT, SET_LOGGED_INFO, POST_SIGNUP */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -198,6 +208,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_LOGIN", function() { return POST_LOGIN; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_LOGOUT", function() { return POST_LOGOUT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SET_LOGGED_INFO", function() { return SET_LOGGED_INFO; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "POST_SIGNUP", function() { return POST_SIGNUP; });
 const REQUEST = "REQUEST";
 const SUCCESS = "SUCCESS";
 const FAILURE = "FAILURE";
@@ -213,6 +224,7 @@ function createRequestTypes(base) {
 const POST_LOGIN = createRequestTypes("POST_LOGIN");
 const POST_LOGOUT = "POST_LOGOUT";
 const SET_LOGGED_INFO = "SET_LOGGED_INFO";
+const POST_SIGNUP = createRequestTypes("POST_SIGNUP");
 
 /***/ }),
 
@@ -288,12 +300,13 @@ LottoATM.getInitialProps = async ({
 /*!**********************!*\
   !*** ./saga/auth.ts ***!
   \**********************/
-/*! exports provided: fetchLogin, default */
+/*! exports provided: fetchLogin, fetchSignUp, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchLogin", function() { return fetchLogin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSignUp", function() { return fetchSignUp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return root; });
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-saga/effects */ "redux-saga/effects");
 /* harmony import */ var redux_saga_effects__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__);
@@ -305,6 +318,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // 로그인
 
 function* fetchLogin(action) {
   try {
@@ -324,10 +338,30 @@ function* watchFetchLogin() {
     const action = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["take"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_3__["POST_LOGIN"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_3__["REQUEST"]]);
     yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(fetchLogin, action);
   }
+} // 회원가입
+
+
+function* fetchSignUp(action) {
+  try {
+    console.log(action.payload);
+    const {
+      data
+    } = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["call"])(_api_auth__WEBPACK_IMPORTED_MODULE_1__["postSignUp"], action.payload);
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])(_action_auth__WEBPACK_IMPORTED_MODULE_2__["signUpActions"].signUpSuccess());
+  } catch (error) {
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["put"])(_action_auth__WEBPACK_IMPORTED_MODULE_2__["signUpActions"].signUpFailure());
+  }
+}
+
+function* watchFetchSignUp() {
+  while (true) {
+    const action = yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["take"])(_constants_actionTypes__WEBPACK_IMPORTED_MODULE_3__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_3__["REQUEST"]]);
+    yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(fetchSignUp, action);
+  }
 }
 
 function* root() {
-  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchFetchLogin)]);
+  yield Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["all"])([Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchFetchLogin), Object(redux_saga_effects__WEBPACK_IMPORTED_MODULE_0__["fork"])(watchFetchSignUp)]);
   const token = _utils_localStorage__WEBPACK_IMPORTED_MODULE_4__["default"].get("USER-KEY");
 
   if (token) {
@@ -388,6 +422,13 @@ const initialState = {
     password: "",
     authStatus: "INIT",
     error: ""
+  },
+  signup: {
+    error: "",
+    email: "",
+    password: "",
+    username: "",
+    authStatus: "INIT"
   }
 };
 
@@ -428,6 +469,26 @@ const authReducer = (state = initialState, action) => {
       case _constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["SET_LOGGED_INFO"]:
         {
           draft.user.isLoggedIn = true;
+          return draft;
+        }
+
+      case _constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["REQUEST"]]:
+        {
+          draft.signup.authStatus = "INIT";
+          draft.login.error = "";
+          return draft;
+        }
+
+      case _constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["SUCCESS"]]:
+        {
+          draft.signup.authStatus = "SUCCESS";
+          return draft;
+        }
+
+      case _constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["POST_SIGNUP"][_constants_actionTypes__WEBPACK_IMPORTED_MODULE_1__["FAILURE"]]:
+        {
+          draft.signup.authStatus = "FAILTURE";
+          draft.signup.error = "Error";
           return draft;
         }
     }

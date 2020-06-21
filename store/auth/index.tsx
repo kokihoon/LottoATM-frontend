@@ -4,16 +4,18 @@ import {
   POST_LOGIN,
   POST_LOGOUT,
   SET_LOGGED_INFO,
+  POST_SIGNUP,
   REQUEST,
   SUCCESS,
   FAILURE
 } from "../../constants/actionTypes";
 
-import { IAuthUser, IAuthLogin } from "../../model/user";
+import { IAuthUser, IAuthLogin, IAuthSignUp } from "../../model/user";
 
 export interface IAuthState {
   user: IAuthUser;
   login: IAuthLogin;
+  signup: IAuthSignUp;
 }
 
 const initialState: IAuthState = {
@@ -32,6 +34,13 @@ const initialState: IAuthState = {
     password: "",
     authStatus: "INIT",
     error: ""
+  },
+  signup: {
+    error: "",
+    email: "",
+    password: "",
+    username: "",
+    authStatus: "INIT"
   }
 };
 
@@ -59,11 +68,25 @@ const authReducer = (state = initialState, action: AuthAction): IAuthState => {
         draft.login.authStatus = "INIT";
         draft.user.isLoggedIn = false;
         draft.user.userInfo = initialState.user.userInfo;
-
         return draft;
       }
       case SET_LOGGED_INFO: {
         draft.user.isLoggedIn = true;
+        return draft;
+      }
+
+      case POST_SIGNUP[REQUEST]: {
+        draft.signup.authStatus = "INIT";
+        draft.login.error = "";
+        return draft;
+      }
+      case POST_SIGNUP[SUCCESS]: {
+        draft.signup.authStatus = "SUCCESS";
+        return draft;
+      }
+      case POST_SIGNUP[FAILURE]: {
+        draft.signup.authStatus = "FAILTURE";
+        draft.signup.error = "Error";
         return draft;
       }
     }
